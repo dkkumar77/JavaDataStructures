@@ -1,4 +1,4 @@
-package ArrayList;
+package Structures.ArrayList;
 
 public class ArrayList<T> {
 
