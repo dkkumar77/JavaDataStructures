@@ -1,7 +1,7 @@
 package BinaryTree;
 
 public class BinaryTree<T> {
-    private class Node<T>{
+    private static class Node<T>{
 
         protected T data;
         public Node<T> left, right;
@@ -49,7 +49,7 @@ public class BinaryTree<T> {
     }
 
     BinaryTree(T data){
-        this(data,null,null);
+        this.root = new Node<T>(data);
 
     }
 
@@ -57,6 +57,10 @@ public class BinaryTree<T> {
         this.root = new Node<T>(data);
         root.setLeft(left.root);
         root.setRight(left.root);
+
+    }
+
+    public static void main(String[] args) {
 
     }
 
