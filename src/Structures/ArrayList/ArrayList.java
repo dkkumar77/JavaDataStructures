@@ -103,10 +103,7 @@ public class ArrayList<T> {
                     index++;
 
                 }
-
                 leftShift(index);
-
-
             }
             else {
                 throw new NonexistentElementException();
@@ -118,6 +115,7 @@ public class ArrayList<T> {
 
 
     }
+
 
     private void leftShift(int index) {
         array[index] = null;
