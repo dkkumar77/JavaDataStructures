@@ -77,6 +77,9 @@ public class LinkedList<T>{
             return this.back;
         }
 
+        public void clear(){
+            nullify();
+        }
         public void add(T data){
             if(front == null) {
                 front = new Node<>(data);
@@ -97,6 +100,10 @@ public class LinkedList<T>{
             this.back = null;
             this.nodeCount = 0;
 
+        }
+
+        public boolean isEmpty(){
+            return front == null;
         }
         public boolean delete(T data) throws NonexistentNodeException{
             try {
@@ -153,7 +160,15 @@ public class LinkedList<T>{
         }
 
 
+    public static void main(String[] args) {
+
+
 
 
     }
+
+
+    }
+
+
 

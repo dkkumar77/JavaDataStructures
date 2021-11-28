@@ -91,6 +91,12 @@ public class ArrayList<T> {
 
 
 
+    protected void deleteFirst(){
+        if(!(elementCount == 0)){
+            delete(array[0]);
+        }
+    }
+
     public void delete(T value){
 
         try {
