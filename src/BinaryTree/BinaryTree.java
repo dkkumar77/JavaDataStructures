@@ -53,6 +53,8 @@ public class BinaryTree<T> {
 
     }
 
+
+
     BinaryTree(T data, BinaryTree<T> left, BinaryTree<T> right){
         this.root = new Node<T>(data);
         root.setLeft(left.root);
@@ -60,8 +62,7 @@ public class BinaryTree<T> {
 
     }
 
-    public static void main(String[] args) {
 
-    }
+
 
 }
