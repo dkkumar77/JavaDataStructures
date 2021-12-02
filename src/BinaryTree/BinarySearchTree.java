@@ -1,7 +1,7 @@
 package BinaryTree;
 
 
-public class BinarySearchTree<T extends Comparable<? super T>> extends BinaryTree<T> {
+public class BinarySearchTree<T extends Comparable<? super T>> extends BinaryTree<T> implements BinarySearchTreeInterface{
 
 
 
@@ -52,7 +52,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> extends BinaryTre
     }
 
     private Node<T> instantize(T data){
-        return new Node<T>(data);
+        return new Node(data);
 
     }
 
