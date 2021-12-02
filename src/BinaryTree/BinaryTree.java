@@ -1,7 +1,7 @@
 package BinaryTree;
 
 public class BinaryTree<T> {
-    private static class Node<T>{
+    public static class Node<T>{
 
         protected T data;
         public Node<T> left, right;
@@ -38,6 +38,33 @@ public class BinaryTree<T> {
         public void setLeft(Node<T> left){
             this.left = left;
         }
+
+        public int getHeight(){
+            return getHeight(this);
+        }
+        private int getHeight(Node<T> node)
+        {
+            int height = -1;
+            if (node != null)
+                height = 1 + Math.max(getHeight(node.getLeft()),getHeight(node.getRight()));
+
+            return height;
+        }
+
+        public int getNumberOfNodes()
+        {
+            int leftNumber = 0;
+            int rightNumber = 0;
+            if(this==null)
+                return 0;
+            if (left != null)
+                leftNumber = left.getNumberOfNodes();
+
+            if (right != null)
+                rightNumber = right.getNumberOfNodes();
+
+            return 1 + leftNumber + rightNumber;
+        } // end getNumberOfNodes
     }
 
 
@@ -53,8 +80,6 @@ public class BinaryTree<T> {
 
     }
 
-
-
     BinaryTree(T data, BinaryTree<T> left, BinaryTree<T> right){
         this.root = new Node<T>(data);
         root.setLeft(left.root);
@@ -62,7 +87,18 @@ public class BinaryTree<T> {
 
     }
 
+    public Node<T> getRoot(){
+        return root;
 
+    }
 
+    public T getRootData(){
+        return root.getData();
+    }
+
+    public int getHeight(){
+        return root.getHeight();
+
+    }
 
 }

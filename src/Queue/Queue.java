@@ -11,7 +11,9 @@ public class Queue <T> extends ArrayList<T> {
         super(DEFAULT_SIZE);
     }
 
-
+    Queue(int length){
+        super(length);
+    }
 
     public void add(T data){
         super.add(data);

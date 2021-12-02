@@ -13,7 +13,7 @@ public class ArrayList<T> {
     }
 
 
-    public int getMax(){
+    int getMax(){
         return MAX_SIZE;
     }
 
@@ -150,5 +150,10 @@ public class ArrayList<T> {
     }
 
 
+    public static void main(String[] args) {
 
+
+
+
+    }
 }
